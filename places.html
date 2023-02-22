@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .start {
+            height: 500px;
+            width: 100%;
+            /* border: 2px solid #333; */
+            background: url("place.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            background-position-x: 20%;
+            background-position-y: 70%;
+/* background-attachment: fixed; */
+        }
+
+        h3 {
+            font-size: 70px;
+            font-family: verdana;
+            /* color: #fff; */
+            color: #000;
+
+            /* background: #000; */
+            background: #fff;
+
+            width: 25%;
+            /* mix-blend-mode: multiply; */
+            mix-blend-mode: screen;
+
+            position: relative;
+            top: 10%;
+            left: 60%;
+            padding: 2%;
+            /* text-align:justify */
+            font-weight: bolder;
+            line-height: 1.6em;
+            opacity: 0.95;
+        }
+
+        .main {
+            height: 300px;
+            width: 97%;
+            margin: auto;
+            margin-top: 0%;
+        }
+
+        .block {
+            float: left;
+            border: 2px solid #333;
+            height: 350px;
+            /* margin-right: 1%; */
+            box-sizing: border-box;
+        }
+
+        .block:nth-child(1) {
+            width: 25%;
+            background: palegoldenrod;
+            color: #000;
+            border-right: none;
+            margin-top: 0%;
+            overflow: auto;
+        }
+
+        .block:nth-child(2) {
+            width: 46%;
+            border-left: none;
+
+        }
+
+        .block:nth-child(3) {
+            width: 28%;
+            margin-left: 0.7%;
+            transform-origin: center;
+            transition: ease-in-out 300ms;
+        }
+
+        .paragraph p {
+            padding: 5%;
+            line-height: 1.6em;
+            font-size: 18px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: justify;
+            overflow:auto;
+        }
+
+        .paragraph h4 {
+            font-size: 30px;
+            font-family: courier;
+            padding-top: 5%;
+        }
+
+
+
+        .place {
+            margin-top: 2%;
+        }
+/* mumbai */
+        #mumbai {
+            background: url("mumbai.jpg") no-repeat;
+            background-size: cover;
+            object-fit: cover;
+        }
+
+        #mumbai_map {
+            background: url("mumbai.png");
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            transition-duration: 500ms;
+        }
+
+        #mumbai_map:hover {
+            background: url("mumbai2.png");
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+        }
+/* pune */
+        #pune {
+            background: url("pune.jpg") no-repeat;
+            background-size: cover;
+            object-fit: cover;
+        }
+
+        #pune_map {
+            background: url("pune.png");
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            transition-duration: 500ms;
+        }
+
+        #pune_map:hover {
+            background: url("pune2.png");
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+        }
+        /* lonavala */
+        #lonavala {
+            background: url("lonavala.jpg") no-repeat;
+            background-size: cover;
+            object-fit: cover;
+        }
+
+        #lonavala_map {
+            background: url("lonavala.png");
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            transition-duration: 500ms;
+        }
+
+        #lonavala_map:hover {
+            background: url("lonavala1.png");
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+        }
+/* aurangabad */
+#aurangabad {
+            background: url("aurangabad.jpg") no-repeat;
+            background-size: cover;
+            object-fit: cover;
+        }
+
+        #aurangabad_map {
+            background: url("aurangabad.png");
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            transition-duration: 500ms;
+        }
+
+        #aurangabad_map:hover {
+            background: url("aurangabad2.png");
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+        }
+
+        /* sindhadurg */
+        #sindhadurg {
+            background: url("sindh.jpg") no-repeat;
+            background-size: cover;
+            object-fit: cover;
+        }
+
+        #sindhadurg_map {
+            background: url("sindhadurg.png");
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            transition-duration: 500ms;
+        }
+
+        #sindhadurg_map:hover {
+            background: url("sindhadurg1.png");
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+        }
+        /* mahabaleshwar */
+        #mahabaleshwar {
+            background: url("mahabaleshwar.jpg") no-repeat;
+            background-size: cover;
+            object-fit: cover;
+        }
+
+        #mahabaleshwar_map {
+            background: url("mahabaleshwar.png");
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            transition-duration: 500ms;
+        }
+
+        #mahabaleshwar_map:hover {
+            background: url("mahabaleshwar1.png");
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+        }
+        /* shegoan */
+        #shegoan {
+            background: url("shegoan.jpg") no-repeat;
+            background-size: cover;
+            object-fit: cover;
+        }
+
+        #shegoan_map {
+            background: url("shegoan.png");
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            transition-duration: 500ms;
+        }
+
+        #shegoan_map:hover {
+            background: url("shegoan2.png");
+            background-size: cover;
+            object-fit: cover;
+            background-position}
+    </style>
+</head>
+
+<body>
+    <center>
+        <header>MAHARASHTRA TOURISM</header>
+    </center>
+    <nav>
+        <center>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+	<li><a href="about.html">ABOUT</a></li>
+                <li><a href="places.html" style="color:indianred">PLACES</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="t&c.html">T &' C</a></li>
+
+            </ul>
+        </center>
+    </nav>
+    <section class="start">
+            <h3><center>PLACES WE VISIT</center></h3>
+
+    </section>
+    <section class="main">
+        <div class="place">
+            <div class="paragraph block ">
+                <center>
+                    <h4>MUMBAI</h4>
+                </center>
+                <p>Mumbai is the capital city of the Indian state of Maharashtra.
+As of 2011 it is the most populous city in India with an estimated city proper population of 12.4 million.
+The larger Mumbai Metropolitan Region is the second most populous metropolitan area in India, with a population of 21.3 million as of 2016.
+ Mumbai lies on the Konkan coast on the west coast of India and has a deep natural harbour. In 2008, Mumbai was named an alpha world city.
+ It is also the wealthiest city in India, and has the highest number of millionaires and billionaires among all cities in India.
+
+
+
+
+Transport
+
+The Mumbai Suburban Railway system carries more than 6.99 million commuters on a daily basis. It has the highest passenger density of any urban railway system in the world.
+
+Mumbai Metro currently provides connectivity with eastern and western part of city.
+
+The Mumbai Monorail opened in February 2014.
+
+BEST buses carry a total of 2.8 million passengers daily.
+
+The black and yellow Premier Padmini Taxis are iconic of Mumbai.
+
+The Bandra-Worli Sea Link is a cable-stayed bridge that connects central Mumbai with its western suburbs
+
+Chhatrapati Shivaji International Airport, Mumbai, India
+
+Jawaharlal Nehru Port Trust is the busiest port in India
+Public transport
+Main article: Public transport in Mumbai
+Public transport systems in Mumbai include the Mumbai Suburban Railway, Monorail, Metro, Brihanmumbai Electric Supply and Transport (BEST) buses, black-and-yellow meter taxis, auto rickshaws and ferries. Suburban railway and BEST bus services together accounted for about 88% of the passenger traffic in 2008.[226] Auto rickshaws are allowed to operate only in the suburban areas of Mumbai, while taxis are allowed to operate throughout Mumbai, but generally operate in South Mumbai.[227] Taxis and rickshaws in Mumbai are required by law to run on compressed natural gas (CNG),[228] and are a convenient, economical, and easily available means of transport.[227]
+
+Rail
+The Mumbai Suburban Railway, popularly referred to as Locals forms the backbone of the city's transport system.[229] It is operated by the Central Railway and Western Railway zones of the Indian Railways.[230] Mumbai's suburban rail systems carried a total of 6.3 million passengers every day in 2007.[231] Trains are overcrowded during peak hours, with nine-car trains of rated capacity 1,700 passengers, actually carrying around 4,500 passengers at peak hours.[232] The Mumbai rail network is spread at an expanse of 319 route kilometres. 191 rakes (train-sets) of 9 car and 12 car composition are utilised to run a total of 2,226 train services in the city.[233]
+
+The Mumbai Monorail and Mumbai Metro have been built and are being extended in phases to relieve overcrowding on the existing network. The Monorail opened in early February 2014.[234] The first line of the Mumbai Metro opened in early June 2014.[235]
+
+Mumbai is the headquarters of two zones of the Indian Railways: the Central Railway (CR) headquartered at Chhatrapati Shivaji Terminus (formerly Victoria Terminus), and the Western Railway (WR) headquartered at Churchgate.[236] Mumbai is also well connected to most parts of India by the Indian Railways. Long-distance trains originate from Chhatrapati Shivaji Terminus, Dadar, Lokmanya Tilak Terminus, Mumbai Central, Bandra Terminus, Andheri and Borivali.[237]
+
+Bus
+Mumbai's bus services carried over 5.5 million passengers per day in 2008,[226] which dropped to 2.8 million in 2015.[238] Public buses run by BEST cover almost all parts of the metropolis, as well as parts of Navi Mumbai, Mira-Bhayandar and Thane.[239] The BEST operates a total of 4,608 buses[240] with CCTV cameras installed, ferrying 4.5 million passengers daily[226] over 390 routes. Its fleet consists of single-decker, double-decker, vestibule, low-floor, disabled-friendly, air-conditioned and Euro III compliant diesel and compressed natural gas powered buses.[241] BEST introduced air-conditioned buses in 1998.[242] BEST buses are red in colour, based originally on the Routemaster buses of London.[243] Maharashtra State Road Transport Corporation (MSRTC, also known as ST)[244] buses provide intercity transport connecting Mumbai with other towns and cities of Maharashtra and nearby states.[245][246] The Navi Mumbai Municipal Transport (NMMT) and Thane Municipal Transport (TMT) also operate their buses in Mumbai, connecting various nodes of Navi Mumbai and Thane to parts of Mumbai.[247][248]
+
+Buses are generally favoured for commuting short to medium distances, while train fares are more economical for longer distance commutes.[249]
+
+The Mumbai Darshan is a tourist bus service which explores numerous tourist attractions in Mumbai.[250] Bus Rapid Transit System (BRTS) lanes have been planned throughout Mumbai.[251] Though 88% of the city's commuters travel by public transport, Mumbai still continues to struggle with traffic congestion.[252] Mumbai's transport system has been categorised as one of the most congested in the world.[253]
+
+Water
+Water transport in Mumbai consists of ferries, hovercrafts and catamarans. Services are provided by both government agencies as well as private partners.[254] Hovercraft services plied briefly in the late 1990s between the Gateway of India and CBD Belapur in Navi Mumbai. They were subsequently scrapped due to lack of adequate infrastructure.[255]
+
+Road
+Mumbai is served by National Highway 3, National Highway 4, National Highway 8, National Highway 17 and National Highway 222 of India's National Highways system.[256] The Mumbai-Pune Expressway was the first expressway built in India.[257] The Eastern Freeway was opened in 2013. The Mumbai Nashik Expressway, Mumbai-Vadodara Expressway,[258] are under construction. The Bandra-Worli Sea Link bridge, along with Mahim Causeway, links the island city to the western suburbs.[259] The three major road arteries of the city are the Eastern Express Highway from Sion to Thane, the Sion Panvel Expressway from Sion to Panvel and the Western Express Highway from Bandra to Dahisar.[260] Mumbai has approximately 1,900 km (1,181 mi) of roads.[261] There are five tolled entry points to the city by road.[262]
+
+Mumbai had about 721,000 private vehicles as of March 2014,[263] 56,459 black and yellow taxis as of 2005,[264] and 106,000 auto rickshaws, as of May 2013.[265]
+
+Air
+The Chhatrapati Shivaji International Airport (formerly Sahar International Airport) is the main aviation hub in the city and the second busiest airport in India in terms of passenger traffic.[266] It handled 36.6 million passengers and 694,300 tonnes of cargo during FY 2014�2015.[267] An upgrade plan was initiated in 2006, targeted at increasing the capacity of the airport to handle up to 40 million passengers annually[268] and the new terminal T2 was opened in February 2014.[269]
+
+The proposed Navi Mumbai International Airport to be built in the Kopra-Panvel area has been sanctioned by the Indian Government and will help relieve the increasing traffic burden on the existing airport.[270]
+
+The Juhu Aerodrome was India's first airport, and now hosts the Bombay Flying Club and a heliport operated by state-owned Pawan Hans.[271]
+
+Sea
+Mumbai is served by two major ports, Mumbai Port Trust and Jawaharlal Nehru Port Trust, which lies just across the creek in Navi Mumbai.[272] Mumbai Port has one of the best natural harbours in the world, and has extensive wet and dry dock accommodation facilities.[273] Jawaharlal Nehru Port, commissioned on 26 May 1989, is the busiest and most modern major port in India.[274] It handles 55�60% of the country's total containerised cargo.[275] Ferries from Ferry Wharf in Mazagaon allow access to islands near the city.[276]
+
+The city is also the headquarters of the Western Naval Command, and also an important base for the Indian Navy.[148]
+                </p>
+            </div>
+            <div class="block " id="mumbai">
+            </div>
+            <div class="block map" id="mumbai_map">
+
+            </div>
+        </div>
+        <div style="clear:both"></div>
+
+
+        <div class="place">
+            <div class="paragraph block ">
+                <center>
+                    <h4>PUNE</h4>
+                </center>
+                <p>Pune  is the second largest city in the Indian state of Maharashtra, after Mumbai. 
+It is the ninth most populous city in the country with an estimated population of 3.13 million.
+ Along with its Industrial Estate Pimpri Chinchwad and the three cantonment towns of Pune, Khadki and Dehu Road,
+ Pune forms the urban core of the eponymous Pune Metropolitan Region (PMR).
+ According to the 2011 census, the urban area has a combined population of 5.05 million while the population of the metropolitan 
+region is estimated at 7.27 million.
+
+
+Transport
+Main article: Transport in Pune
+Public transport
+
+Pune Railway Station � entrance
+
+An EMU on the Pune-Lonavla suburban line
+Public transport in Pune includes Pune Suburban Railway, bus services operated by PMPML and auto rickshaws. Online transport network companies such as Uber and Ola Cabs also provide rideshare and taxi services in the city. Construction of Pune Metro, an urban mass rapid transit system, is underway as of 2018.[225]
+
+Rail
+Main articles: Pune Railway Station and Pune Suburban Railway
+Pune Suburban Railway (electric multiple units) (popularly called local trains) connect Pune to the industrial city of Pimpri-Chinchwad and the hill station of Lonavala. Daily express trains connect Pune to Mumbai, Ahmedabad, Chennai, Delhi, Hyderabad, Jaipur, Nagpur, Thiruvananthapuram, Kochi, Coimbatore, Bangalore, Allahabad, Kanpur, Howrah, Jammu Tawi, Darbhanga, Goa, Gwalior, Varanasi, Bhubaneswar, Ranchi, Patna, and Jamshedpur. At Pune, there is a diesel locomotive shed and an electric trip shed.[226] Pune Railway Station is administered by the Pune Railway Division of Central Railways.[227]
+
+Bus service
+
+Local buses in Pune
+Main articles: Pune Mahanagar Parivahan Mahamandal Limited and Rainbow BRTS
+Public buses within the city and its suburbs are operated by Pune Mahanagar Parivahan Mahamandal Limited (PMPML). PMPML operates the Rainbow BRTS system, the first of its kind in India, in which dedicated bus lanes were supposed to allow buses to travel quickly through the city. The project has turned out to be a failure, receiving little patronage from the local citizenry.[228] Maharashtra State Road Transport Corporation runs buses from stations in Shivajinagar, Pune station, and Swargate to all major cities and towns in Maharashtra and neighbouring states. Private companies also run buses to major cities throughout India.[229]
+
+Metro
+Main article: Pune Metro
+Pune Metro, a mass rapid transit system, is under construction and is expected to be operational by 2021.[230][231] The detailed project report was prepared for the initial two lines by Delhi Metro Rail Corporation which was approved by the State government in 2012 and by the central government in December 2016.[232][233][234] Two lines, Line 1 from Pimpri Chinchwad Muncipal Corportion Building to Swargate and Line 2 from Ramwadi to Vanaz, with a combined length of 31.25 kilometres (19.42 mi), are being constructed by MahaMetro, a 50:50 joint venture of the State and central governments.[235] Line 1 will run underground between Swargate and Range Hills be and elevated until Pimpri Chinchwad. Line 2 will be completely elevated and will intersect Line 1 at the Civil Court interchange station in Shivajinagar.[236]
+
+Line 3 between Hinjawadi and Civil Court, Shivajinagar was approved by the state and central governments in January and March 2018, respectively.[237][238] This 23.3-km line is being implemented by PMRDA on a public-private partnership basis.[239]
+
+Road transport
+
+A highway leading into Pune
+Main article: Roads of Pune
+See also: Old Mumbai�Pune Highway, Dehu Road�Katraj bypass, and New Katraj Tunnel
+Pune is well-connected to other cities by Indian and state highways. National Highway 4 connects it to Mumbai, Bangalore and Kolhapur. National Highway 65 to Hyderabad, Suryapet, Vijayawada and National Highway 50 to Nashik. State highways connect Pune to Ahmednagar, Aurangabad and Alandi. Pune is served by three intra-city highways: Old Mumbai�Pune Highway; Pune�Satara Highway and Dehu Road�Katraj bypass, all part of National Highway 4.
+
+The Mumbai-Pune Expressway is India's first six-lane high-speed expressway, and it was built in 2002. Only four wheeled vehicles are allowed on it. This expressway has reduced travel time between Pune and Mumbai to a little over two hours. A ring road is planned.[240][241][242]
+
+Personal transport
+
+Two wheelers in Pune
+Once known as the "cycle city of India", Pune has experienced a rapid growth in the number of motorised two wheelers replacing the bicycle.[243] In 2005 the city was reported to have one million two wheelers. The report also stated that the increase in vehicular and industrial activity had led to a 10-fold increase in particulate pollution in some areas of the city.[244] A report published in 2016 estimated the number of two wheeler users in Pune at 3.5 million.[245] In 2018 the number of vehicles in the city has exceeded its population with 3.62 million total vehicles, 2.70 million being two wheelers.[246][247] In the fiscal year 2017�18 alone 300,000 new vehicles were registered in the city, two-thirds of them two wheelers.[248]
+
+A revival of cycling in Pune with 130 kilometres (81 mi) of cycle tracks built was attempted as a part of the BRT system under the Jawaharlal Nehru National Urban Renewal Mission in 2004. However, a 2011 report revealed that only 88 kilometres (55 mi) of tracks were actually built and most were unusable at the time of the report.[249][250] Under the Smart Cities Mission, app based cycle sharing schemes have been launched in the city since late 2017.[251][252][253] The PMC has devised the Pune Cycle Plan with 470 kilometres (290 mi) of cycle tracks planned.[254][255][256] Cycles are also seen as a possible way of improving last mile connectivity for the metro system.[257]
+
+Air
+
+Departure lounge at Pune Airport
+Main article: Pune International Airport
+See also: Chhatrapati Sambhaji Raje International Airport
+Pune International Airport is an international Airport at Lohegaon, operated by the Airports Authority of India. It shares its runways with the neighbouring Indian Air Force base.[258] In addition to domestic flights to all major Indian cities, the airport has international direct flights to Dubai, operated by Air India Express,[259] and Frankfurt, operated by Lufthansa.[260]
+
+A new international airport has been proposed, due to the limited capacity of the existing airport. A location in the Chakan-Rajgurunagar area was chosen for the airport,[261][262] but non-availability of land delayed the project for over a decade.[263] In September 2016 the location was changed to Purandar, c. 20 kilometres (12 mi) south of the city.
+
+1. Aga Khan Palace
+Aga Khan Palace, Pune
+
+The Aga Khan Palace is a testament to the architectural wonders of a bygone era. Considered as one of the largest landmarks in Indian history, The Aga Khan Palace is a spectacular building that was built in 1892. Its other claim to fame is that is served as a prison for Mahatma Gandhi and other noted freedom fighters during the Indian Freedom movement. Aga Khan Palace comprises of Italian arches, sprawling green lawns and huge hallways that now house many photos and portraits that depict the life of various freedom fighters and also hosts the Gandhi national Memorial society and a shop that deals with the sales of Khadi and other handloom textiles.
+
+2. Shaniwar Wada
+Shaniwar Wada Fort, Pune Tourist Places
+
+Shaniwar Wada served as the seat of power for Peshwa rulers of the Maratha Empire. This magnificent architectural marvel was an extravagant fortification effort made by Peshwa Baji Rao I following the victory in the Third Anglo Maratha War. The fort was destroyed in 1823 by a fire, since then it has functioned as a tourist attraction comprising of grand armoured gates, massive palaces and a beautiful fountain.  
+
+3. Sinhagad Fort
+Located around 30 kilometres away from Pune, the Sinhagad fort serves as an excellent destination for trekking due to its significant location on the Bhuleshwar Range of the Sahyadri Mountains. Not only can you enjoy the cool climes of Pune but you can also experience how the fort could have once acted as an active military outpost during the Maratha Empire. Sinhagad fort is a popular tourist destination for those who wish to experience the grandiose architecture of Maratha and the scenic beauty of the Sahyadris.  
+
+4. Chaturshringi Temple
+Chaturshringi temple is a Hindu temple located on the Slope of a hill on the Senapati Bapat road. The temple is a great 90 feet high and 125 feet wide structure that houses the shrine of the Goddess Chaturshringi. One has to climb 100 steps to reach the shrine of the goddess which is said to be a symbol of faith and power. The temple complex also includes shrine of the Lord Ganesha and Goddess Durga as well. This includes miniature idols of Ashtavinayaka which are all located on 4 different hillocks. Goddess Chaturshringi is said to be the reigning goddess of Pune because of which this is a major tourist hub in the city.
+
+5. Pataleshwar
+Pataleshwar, Pune Tourist Places
+
+Pataleshwar has been declared as a protected monument by the government. This 8th century rock-cut temple built during the Rashtrakuta dynasty is dedicated to Lord Shiva. There�s a Linga situated within the inner sanctum flanked by two smaller cells on either side. In front of the cave is the Nandi Mandapa which is the most peculiar feature of the architecture at Pataleshwar. The temple is still in use and the Linga is anointed with ghee and yogurt. If you want to see ancient Indian architecture which is still prevalent in today�s day and age, then Pataleshwar is where you should go.
+
+Pune has a host of tourist attractions that are waiting to be discovered by travel enthusiasts like you, so pick up that bag and start exploring Pune. Book your flights now!
+                </p>
+            </div>
+            <div class="block" id="pune">
+            </div>
+            <div class="block map" id="pune_map">
+
+            </div>
+        </div>
+        <div style="clear:both"></div>
+
+
+        <div class="place">
+                <div class="paragraph block ">
+                    <center>
+                        <h4>LONAVALA</h4>
+                    </center>
+                    <p>Lonavala or Lonavla  is a town and a hill station Municipal Council in Pune district in the Indian State of Maharashtra.
+[1] It is about 64 kilometres (40 mi) west of modern-day Pune city and 96 kilometres (60 mi) from the city of Mumbai. 
+It is known for its production of the hard candy chikki[2] and is also a major stop on the railway line connecting Mumbai and Pune
+. From the Pune suburbs, local trains are available from Pune Junction. 
+Both the Mumbai-Pune Expressway as well as the Mumbai-Chennai highway pass through Lonavala.
+
+Lonavala is also home to INS Shivaji (formerly HMIS Shivaji) which is the Indian Navy's Premier Technical Training Institute. 
+The house of Trivandrum based Asianet TV channel's hit Realty show Bigg Boss Malayalam 1 is set up within an unknown estate in Lonavla.
+
+
+Transport
+
+Mumbai-Pune Expressway
+By road
+Lonavla is on the Mumbai-Pune Expressway and is well-connected to several towns of Khopoli, Karjat, Talegaon Dabhade, etc.
+
+By train
+Further information: Lonavla Railway Station
+Lonavla is well-connected by train. Local trains run from Pune at 2 hour intervals. 
+Those originating from Mumbai along the central line have Khopoli as their last station. 
+Buses are available at regular intervals to complete the remaining 15 km of the journey to Lonavla from Khopoli bus station. 
+It takes 2.5 hours by train from Mumbai and 1 to 1.5 hour from Pune. All trains, travelling between Mumbai and Pune, halt at Lonavla. 
+Trains from Mumbai halt at Karjat to attach banker locomotives before the train starts journey up the western ghats to reach Lonavla.
+
+By air
+Lonavla does not have an airport, though the Indian Air Force station Troppo is situated on the way to Aamby Valley City. 
+The city of Aamby Valley has its own private airport.
+ The nearest commercial airports are Pune International Airport at 64 km and Chhatrapati Shivaji International Airport at 104 km.
+ A seaplane service is also available between Juhu and Pawana Dam, which is 14 km away from Lonavala.
+
+Places of interest around Lonavla and Khandala
+
+View of Rajmachi Point, Lonavla
+Rajmachi Point
+Rajmachi Point is located about 6.5 km from Lonavla. This point commands a view of Shivaji maharaj's fort, Rajmachi (Royal terrakouioce) and the surrounding valley. Regular State Transport buses ply between Rajmachi Point and Lonavla from the State Transport Bus Stand. The Vaghjai Dari is also located here.
+
+Ryewood Park & Shivaji Udyan
+This is an extensive garden situated in Lonavla. The garden has a number of tall trees - some of which are very old.[citation needed] There is an old Shiva temple in the park.
+
+Valvan Dam
+Valvan Dam is a Britisher built garden and is more than a century old. This dam has a garden at the foot of its wall, and is a popular evening spot 2 km from the town.[citation needed] The dam supplies water to the Khopoli power station at the foothills of the Sahyadris for generating electricity. The Kundali River feeds into the dam's reservoir.
+
+Della Adventure Park
+Della is India�s largest adventure park situated in popular Lonavala hill station. It is a very big theme park cum resort. It also serves as a corporate training destination for companies in Mumbai & Pune. The park has spread over an area of 36 acres. It is located at about 3000 feet height above MSL (mean sea level). Della adventure offers close to 52 adventure activities.
+
+Lonavla Lake
+Lonavla Lake is surrounded by natural scenery, about 1.6 km from the town. The lake dries up during the winter and summer months offering an expanse of green grass which is used by walkers and joggers.[citation needed] This place attracts tourists for its street food,[citation needed] including convenience food items like smoked corn on the cob, shaved ice (gola), vada pav, chaat, and hot ginger tea.
+
+Duke's Nose
+Duke's Nose stands 12 km from Lonavla, clearly visible from the highway while driving towards Mumbai. This landmark in Khandala is visited by hikers.[citation needed] Also known locally as Naagphani (Cobra's Hood), the cliff owes its name to the Duke of Wellington, whose ample nose it resembles.
+
+Tiger's LeapS
+
+A place near Tiger Point
+Tiger's Leap also known as Tiger's Point is a cliff-top with a sheer drop of over 650 m, giving an extensive view. Buses are available up to INS Shivaji and the remaining distance of about 1.6 km has to be covered on foot. Legend has it that while being chased by a tiger once, the maratha king Shivaji jumped into a ditch on the hill and the tiger leaped off it into the valley giving it the name of tiger's leap.
+
+Just around tiger's leap, there is a small waterfall active only during the monsoon. It serves the purpose of relaxing in the water better than Bushy dam, as the force of the fall is higher. Also, after the brief steep descent, the fall becomes a stream with a fair amount of force to go all the way down to the base of the Tiger's Leap. Adventurers can trek down the stream whilst intermittently stepping back on land where the water current is too strong and the fall is steep.
+
+Karla Caves
+Karla caves, located near Lonavla, is a complex of cave shrines built by Buddhist monks around 3rd to 2nd century B.C. A temple of Goddess Ekvira Devi is also present here.[10]
+
+Lohagad Fort
+A robust climb of about 11.2 km from Malavali Railway Station takes you to the 'Iron Fort', once a formidable battle-station of Chatrapati Shivaji Maharaj. The fort commands a view of the surrounding hills and hamlets.
+
+Visapur Fort
+Adjacent to the Lohagad fort lies the visapur fort which is part of the Lohagad-Visapur fortification. Visapur Fort is larger and at a higher elevation than its twin- Lohagad. It was built during 1713-1720 CE by Balaji Vishwanath.
+
+Bhushi Dam
+A waterfall near the dam is located between Lonavla and I.N.S. Shivaji. Buses running on the I.N.S. Shivaji Road stop here.[11]
+
+Lion Point
+This is a viewpoint midway between Bhushi Dam and Aamby Valley which overlooks a deep valley and mountains known for its roasted corn and onion fritters. This point does not have any lions but is named so because it is associated with the Lions Club of Lonavala.
+
+Narayani Dham
+Narayani Dham is a temple constructed in 2002 in honor of the Hindu Goddess Narayani . It is at a distance of 2 km from the Lonavla Railway Station. The temple has idols of Durga Mata, Salasar Balaji (Hanuman) and Ganpati housed in a marble structure.
+
+Tungarli Dam
+This lake and Dam comes to life during the Monsoon season, where some people climb the mountain top to the Dam. This dam was built during the British era and features a serene surrounding of trees and hillocks.
+
+Shooting Point
+Another viewpoint in the town of Khandala (Bazaar peth), provides views of the Rajmachi Fort and the valley. Also the home for the St. Mary's villa.
+
+Seven villas
+One of the most iconic plots in Lonavala, seven Villas is an iconic landmark of the new developing Lonavala.
+
+Here is a list of some of the best resorts in Lonavala:
+01	Lagoona Resort
+Lagoona Resort
+The beautiful Lagoona resort Is the perfect example to have everything you want right in one place! Famous for being one of the few eco-friendly Lonavla resorts with stunning accommodations and comforting amenities to boast of!
+
+Stay at the stunning resorts in Lonavala to enjoy the best offerings of nature amidst warm and gracious hospitality. The resort is also famous for its restaurant, Patio which has a gourmet delight to offer.
+
+Amenities: Patio restaurant, swimming pool, indoor games.
+
+Location: S No. 55, Tungarli, District Pune, Lonavala, Maharashtra 410403
+
+02	Treasure Island Resort
+Treasure Island Resort
+You can hunt for the treasures of joy and happiness right in Lonavala Resorts at Treasure Island Resort. A m�lange of colourful environs and perfect location, it is indeed a hidden gem in the beautiful landscapes. Boasting of all the modern amenities, amidst jade green lawn and sapphire pools.
+
+Amenities: Swimming pool, children�s play area, indoor, outdoor games, fitness centre, sauna.
+
+Location: 26/A, Hari Niwas Building, New Opera House, Charni Road, Mumbai. 400007
+                    </p>
+                </div>
+                <div class="block" id="lonavala">
+                </div>
+                <div class="block map" id="lonavala_map">
+    
+                </div>
+            </div>
+            <div style="clear:both"></div>
+
+            <div class="place">
+                    <div class="paragraph block ">
+                        <center>
+                            <h4>AURANGABAD</h4>
+                        </center>
+                        <p>Aurangabad is a city in the Aurangabad district of Maharashtra state in India.
+The city is a tourism hub, surrounded by many historical monuments, including the Ajanta Caves and Ellora Caves,
+ which are UNESCO World Heritage Sites, as well as Bibi Ka Maqbara and Panchakki.
+
+Transport
+Air
+
+Aurangabad Airport
+Aurangabad Airport (Chikkalthana Airport) is an airport serving the city and has connecting
+ flights to Hyderabad, Delhi, Mumbai, Bangalore, Tirupati and Thiruvananthapuram. 
+In 2008, flights were made available to the people travelling to the Hajj pilgrimage.
+
+Rail
+Aurangabad railway station is the major railway station under Nanded railway division.
+
+Tourist attractions
+Main articles: Tourism in Marathwada and Tourist attractions in Aurangabad, Maharashtra
+Aurangabad is a very historical city along with its surrounding towns and villages. It receives tourists and surveyors from all over the world.
+
+
+Kailasa temple, Ellora
+
+Bibi Ka Maqbara
+Ellora and Ajanta Caves: The world-famous Ellora and Ajanta Caves are situated at 29 km (18 mi) and 107 km (66 mi) respectively from
+ Aurangabad city and come within the Aurangabad district. The Ellora Caves consist of 34 caves built between 5th and 10th century CE under 
+the patronage of Rashtrakuta Dynasty. They represent the epitome of Indian rock cut architecture.[30] The Ajanta Caves are also 30 rock cut
+ caves around a gorge, built by the Satavahana, Vakataka and Chalukya dynasties between 2nd and 5th century CE.[31] They contain the rarest
+ and finest surviving examples of ancient Indian art, especially painting.[32] Both the Ellora and Ajanta Caves are UNESCO World Heritage Sites.
+Bibi Ka Maqbara: The Aurangabad city is known for the Bibi Ka Maqbara situated about 3 km (2 mi) from the city which is the burial mausoleum
+ of Emperor Aurangzeb's wife, Dilras Banu Begum also known as Rabia-ud-Daurani. It is an imitation of the Taj Mahal at Agra and due to its 
+similar design, it is popularly known as the "Taj of the Deccan".[33]
+
+Daulatabad Fort: The Daulatabad Fort (aka Devgiri Fort) located about 15 km (9 mi) north-west of Aurangabad was one of the most powerful 
+forts during the medieval period. Built in the 12th century CE by the Yadava Dynasty, it's a citadel that was never conquered by any military 
+force. The British called it the "best fort of India", due to its extraordinary military strength. Built on a 200 metre high conical hill, 
+the fort was defended by moats and trenches running around the hill at its foot besides the most complex and intricate defence system. The 
+fort has two fixed massive canons which can be pivoted. The fortifications comprise three encircling walls with bastions.[34]
+
+Panchakki: The 17th-century water mill (Panchakki) situated at a distance of 1 km from the city is known for its underground water channel,
+ which traverses more than 8 km. to its source away in the mountains. The channel culminates into an artificial waterfall that powers the mill.
+
+Gateways: The city is also famous for the 52 gateways built during Mughal era which gives it the name of "City of Gates".[35]
+
+Aurangabad Caves: These are situated at a distance of 5 km (3 mi), nestled amidst the hills are 12 Buddhist caves dating back to 3 A.D. Of 
+particular interest are the Tantric influences evident in the iconography and architectural designs of the caves.
+
+Grishneshwar Temple: It is one of the 12 jyotirlinga shrines in India. The present temple was built by Ahilyabhai Holkar in 18th century CE.
+ The structure is a unique example of Bhoomija architecture with a Maratha style influence.[36]
+Salim Ali Lake & Bird Sanctuary: Popularly known as Salim Ali Talab is located in the northern part of the city near Delhi Darwaza,
+ opposite Himayat Bagh. During the Mughal period it was known as Khiziri Talab. It has been renamed after the great ornithologist and
+ naturalist Salim Ali. It also has a bird Sanctuary and a garden maintained by the Aurangabad Municipal Corporation.
+
+Idol of Lord Shri Parshvanath at Kachner
+
+Tomb of Aurangzeb: The tomb of the last great[37] Mughal emperor Aurangzeb is located in the village of Khuldabad, 24 km (15 mi) to 
+the north-west of Aurangabad in Aurangabad district[38] It is located in the south-eastern corner of the complex of the dargah of 
+Sheikh Zainuddin.[38]
+
+Kachner Jain Temple: This is a 250 years old temple dedicated to Parshvanath. The idol here is called Chintamani Parshvanath.
+Siddharth Garden & Zoo[39]
+
+Gate of Siddharth Garden and Zoo
+Siddhartha Garden and Zoo is a park and zoo situated in near of the central bus station in Aurangabad. This is the only zoo in Marathwada region. There are various types of animals and birds. The name of "Siddhartha" has been kept on the name of Gautama Buddha
+                        </p>
+                    </div>
+                    <div class="block" id="aurangabad">
+                    </div>
+                    <div class="block map" id="aurangabad_map">
+        
+                    </div>
+                </div>
+                <div style="clear:both"></div>
+
+                <div class="place">
+                        <div class="paragraph block ">
+                            <center>
+                                <h4>SINDHADURG</h4>
+                            </center>
+                            <p>Sindhudurg is an administrative district in the state of Maharashtra in India, which was carved out of the erstwhile Ratnagiri District. 
+The district headquarters are located at Oros. The district occupies an area of 5207 km� and has a population of 849,651 of which 12.59% 
+were urban (as of 2011).
+
+Sindhudurg is bordered on the north by Ratnagiri District, on the south by the state of Goa, on the west by the Arabian Sea, and to the east across the crest of the Western Ghats or Sahyadris is Kolhapur District. Sindhudurg is part of Konkan (coastal) region, a narrow coastal plain in western Maharashtra which lies between the Western Ghats and the Arabian Sea.
+
+Sindhudurg has a semi-tropical climate and remains warm and humid in most of the year. It has three clear seasons : Rainy (June � October), winter (November-mid February) and Summer (mid February�May). Temperatures vary between Max. 32 �C and monsoon winds bring heavy rains (average rainfall 3240.10 mm).
+
+Transportation
+The Sindudurg district is connected to state capital Mumbai by road through National Highway 17( NH-17 ) which is now renumbered as NH-66.[7] This highway also connects district to neighbouring state Goa and Karnataka also. There are regular MSRTC and private luxury buses connecting to adjoining cities like Kolhapur (110 km away from Kanakavli City), Belgaum (90 km away from Sawantwadi City), Panaji � Goa (55 km away from Sawantwadi & Vengurle). Towns and major villages has good connectivity with Mumbai as major migrated population of district is located in Mumbai area. According to one source, there are roughly more than 120 luxury buses running daily towards Mumbai and suburbs. District is also well connected by Konkan railway to Mumbai, Thane,Goa and other parts of the country like Mangalore, Karwar Ernakulam, Thiruvananthapuram, Coimbatore, Tirunelveli, Hapa, Veraval, New Delhi, Jodhpur, Porbundar by Konkan Railway. The main railway stations on this route are Kudal, Kankavli and Sawantwadi. Many trains halt at these stations. The nearest airport is Dabolim Airport in Goa which is very close(80 km) for cities like Sawantwadi, Kudal and Vengurle. New airport Sindhudurg Airport at Chipi-Parule is under construction.[8]
+
+Places of attraction
+Tourist Destinations
+Amboli Hill Station Sawantwadi
+Sindhudurg Fort in Malvan
+Vijaydurg Fort Devgad
+Scuba diving in Tarkarlli (Malvan)
+Tarkarli Beach
+Nivati Rock (A Light House in deep sea), Nivati Beach
+Bhagvati Temple, Dhamapur Lake
+Sawantwadi Palace
+Sawantwadi Lake (Moti Talav)
+Rock Garden at Malvan
+Tilari Dam (Dodamarg)
+Mangeli Waterfall (Dodamarg) - One of the famous waterfall in recent years
+Navdurga Redi
+Napapne Waterfall, Vaibhavwadi
+Achara Beach and Rameshwar Temple (16th Century)
+Mangeli waterfall (Dodamarg Taluka � near Goa)
+Shi Mandir, Medhe (Dodamarg Taluka )
+* dream land garden, navivadi (kudal taluka)
+
+Rameshwar Temple Kandalgaon
+Manache waterfall
+Temples
+shri devi sateri temple (pawashi)
+Shri Dev. Lingeshwar temple (Tulsuli tarf Mangaon)
+Shri Devi Gothanadevi temple (Tulsuli tarf Mangaon)
+Kunkeshwar temple, Devgad[3]
+Lakshminarayan Temple, Walwal
+Shri Sateri BhadraKali Temple, Aronda
+Shri Bramhanand Swami Math, Ozar (Taluka Malvan)
+Bharadi Devi temple, Aangnewadi, Masure
+Shri Sai Baba Temple (First and oldest temple of Saibaba in India), Kudal
+Redi Ganesh Vengurla
+Navadurga Temple at Redi
+Shri Dev Rameshwar temple (17th Century) in Aakeri, Sawantwadi
+Shri Dev Rameshwar Temple (16th Century) in Rameshwar, Girye-Vijaydurg
+Shree Dev Rameshwar Temple, Achara
+Bhalchandra Maharaj Ashram, Kankavli
+Shri Rahateshwar Mandir, Devgad
+Shri Dev Gangeshvar,Lore No. 1(Kankavli)
+Shri Dev Kaleshwar temple, Nerur (Kudal)
+Shri Dev Kudaleshwar Temple, Kudal
+Shri Dev Laxmi Narayan, Walawal (Kudal)
+Shri Dev ravalnath temple (ambdos, malvan)[1]
+Shri Devi Mauli Temple, Walawal (Kudal)
+Shri Devi Yakshini Temple, Mangaon (Kudal)
+Shri Dev Ling Ravalnath Karanje Mandir, Karanje (Kanakavli)
+Shri Dev Gopalkrishna Temple, Talashil-Tondavali (Malvan)
+Shri Dev Rameshwar Temple, Humarmala- walawal (Kudal)
+Shri Devi Sateri Shantadurga Temple, Mhapan (Vengurle)
+Shri Dev Siddheshwar Temple, Mhapan (Vengurle)
+Shri Dev Adnarayan Temple, Parule (Vengurle)
+Shri Devi Chamundeshwari Temple, Aandurle (Kudal)
+Shri Dev Vetoba temple, Parule (Vengurle)
+Shri Dev Mahapurush temple,bhogave wadi Parule (Vengurle)
+Shri Dev Kshetrapal temple, Parule-chipi (Vengurle)
+Shri Dev Maruti Temple, Kudal City
+Shri Dev Vetal Temple, Pendur (Malvan)
+Shri Dev Lingeshwer Temple, Kalse (Malvan)
+Shri Devi Bhavai Bhagavti Temple & Dhampur Lake, Dhampur (Malvan)
+Shri Ganesh Temple at Sawarwadi
+Shri Lingeshwar-Pavanadevi Mandir,Janavali(Kanakavli)
+Shri Maooli-Ravalnath-Vetal-Bagwe Maharaj Samadhi, Masure.
+Shri kalbhairav temple, kharepatan(kankavli).
+Shri Dev Kunkeshwar Temple (Devgad)
+Bhagwati Devi Temple (Kot Kamte)
+Shri Dev Jaiteer Temple, Tulas (Vengurla)
+Shri Dev Vetoba Temple, Ajgaon (Sawantwadi)
+Shri Devi Shanta Durga Temple, Vadachapat (Malvan).
+Shri Devi Kelbai temple,kudal
+Vyagreshwar temple manache devagad
+Beaches
+Redi
+Shiroda
+Tarkarli
+Malvan
+Talashil Beach
+Tondavali Beach
+Vijaydurg
+Rameshwar
+Kotharwadi Beach, Girye
+Velagar
+Bhogve mahapurush
+Nivati (Mhapan � Taluka Vengurle)
+Khavne (Mhapan � Taluka Vengurle)
+Kondura (Dabholi � Taluka Vengurle)
+Devbaug (Malvan)
+Waingani (aachra)
+Sagareshwar (Vengurle)
+Aachra (Malvan)
+Mochemad, Aravali(Vengurle)
+Mithbav (Devgad)
+Chivla, Rajkot (Malvan)
+Bhogve (Vengurle) � you can see this beach in famous Marathi movie 'Shwaas'
+                            </p>
+                        </div>
+                        <div class="block" id="sindhadurg">
+                        </div>
+                        <div class="block map" id="sindhadurg_map">
+            
+                        </div>
+                    </div>
+                    <div style="clear:both"></div>
+
+                    <div class="place">
+                            <div class="paragraph block ">
+                                <center>
+                                    <h4>MAHABALESHWAR</h4>
+                                </center>
+                                <p>Mahabaleshwar is a small town and a municipal council in Satara district in the Indian state of Maharashtra.
+ It is a hill station located in the Sahyadri mountain range. With one of the few evergreen forests of India,
+ it served as the summer capital of Bombay province during the British Raj.
+
+Transport
+Road
+Mahabaleshwar is located around 32 km from Wai. It is around 260 km from Mumbai, the state capital. The nearest major city is Satara, around 45 km away, and is 120 km from Pune. Mahabaleshwar is connected by the National Highway 4. Bus services by state-run MSRTC and private organizations connect it by buses from Pune, Mumbai, Sangli and Satara.
+
+Rail
+Nearest railroad is Satara, around 60 km. Nearest major railway junctions include Pune (120 km), Miraj (170 km) . Private cars and cabs, as well as state-run bus services are available in these locations to Mahabaleshwar. Also, a Rail station named Diwan Khavati on Kokan Railway near Khed gives a route of 60 km via Poladpur to Mahabaleshwar not so frequented though.
+
+Air
+The nearest airport is Pune International Airport, serving the city of Pune, about 120 km from Mahabaleshwar. Chhatrapati Shivaji International Airport of Mumbai is 270 km.
+
+Taxi Service
+
+Old Mahabaleshwar
+
+Panchaganga temple in Old Mahabaleshwar, 1850s
+In old Mahabaleshwar, 7 km from Mahabaleshwar, there are many tourist points and 5 temples to see, with examples of old Indian architecture. There are also natural view points, some named by the British, who went on holidays in these places during the British Raj.
+
+Krishnabai temple
+Behind Panchganga temple, there is a small trail that leads to Krishnabai temple where the Krishna river is worshiped. It is built on the hilltop overlooking the Krishna valley and was built in 1888 by a ruler of Ratnagiri on the Konkancoast. The temple has a Shiva lingam and a beautiful statue of Krishna. A small stream of the river flowing from a cow-face (gomukh) falls on a 'Kunda' or water tank. Stone carved columns and ceilings are the special characteristics of this temple. This old temple has gathered moss and is in ruins. It is not visited much by tourists and is isolated. But it provides a most exquisite view of the river Krishna.
+
+3 Monkey Point
+Named because of the natural sculpture of the stones which looks like three monkeys sitting beside each other and portraying 3 monkeys of Gandhiji. Nestled deep in the valleys one can figure out from the outline of a big stone a natural cut out it give an effect of 3 monkey sitting next to each other portraying the Three Wise Monkeys. This point is on route to Arthur's Seat.
+
+Arthur point
+
+A view from Arthur seat point
+Officer Sir Arthur Malet (1806�1888)[3](Not to be confused with British born actor of same name), who sat here and gazed at the Savitri River, where he lost his wife and children in a tragic ferry mishap.[citation needed]
+
+Venna Lake
+
+The Venna lake
+Today, Mahabaleshwar is a popular holiday resort and honeymoon spot, and an important pilgrimage site for Hindus.
+
+
+Boats on the Venna lake in Mahabaleshwar.
+The Venna lake is one of the major tourist attractions of Mahabaleshwar. The lake is surrounded by trees on all sides.
+
+In Mahabaleshwar one can get hotels for all budgets from budget hotels to 3 Stars hotels. You can get hotel from where one can enjoy the Lake's View or in midst of the Mahabaleshwar's famous market.[6]
+
+View point
+Kate's Point
+
+Balakwadi dam viewed from Kate's Point
+Kate's point is located to the east of Mahabaleshwar and is famous for its view of two reservoirs, Balakwadi and Dhom. The point is around 1,280 m high.
+
+Needle Hole Point / Elephant Point
+
+Needle hole rock, viewed from the point
+Needle hole point is located near Kate's Point. One can see a natural rock formation with a hole in between, thus giving the name Needle-hole. The point is also famous for the view of Deccan traps, which look like an elephant's trunk.
+
+Wilson Point
+Named after Sir Leslie Wilson, the Governor of Bombay from 1923 to 1926, Wilson Point is the highest point in Mahabaleshwar at 1439 m. Known as Sindola Hill during the colonial rule, Wilson point is the only location in Mahabaleshwar where both sunrise and sunset can be seen. It offers a spectacular glance of Mahabaleshwar in all directions. It located at behind Mahabaleshwar-Medha road at 1.5 km from Mahabaleshwar city.
+
+Pratapgad
+Pratapgad is a fort near Mahabaleshwar. The fort was built by Shivaji Maharaj. The fort is popular for in History of India as Commander of Bijapur Afzalkhan was defeated and killed by Shivaji Maharaj at Pratapgad.
+
+Lingmala Waterfalls
+
+Panoramic view of Lingamala waterfalls
+This waterfalls is located near Mahabaleshwar. The water here falls from a height of approximately 600 feet. The water of Lingamala waterfalls cascades into the Venna Lake. The waterfalls is divided by projecting rocks into multiple tier.[non sequitur]s
+                                </p>
+                            </div>
+                            <div class="block" id="mahabaleshwar">
+                            </div>
+                            <div class="block map" id="mahabaleshwar_map">
+                
+                            </div>
+                        </div>
+                        <div style="clear:both"></div>
+
+                        <div class="place">
+                                <div class="paragraph block ">
+                                    <center>
+                                        <h4>SHEGOAN</h4>
+                                    </center>
+                                    <p>Shegaon is a town and municipal council in the Buldana district in the Indian state of Maharashtra. 
+Shegaon has become a pilgrimage centre due to the influence of Shri Sant Gajanan Maharaj, who is considered a saint by Hindus.
+
+Transportation
+
+Shegaon is located 300 km (190 mi) west of Nagpur and 550 km (340 mi) east of Mumbai.
+ It is connected by Hajira�Dhule�Howrah National Highway 6 to Khamgaon, Balapur, Malkapur and Akola.
+
+Shegaon Railway station is located on the Nagpur�Mumbai line of the Central Railway of Indian Railways. 
+It has direct train connectivity to Mumbai CST, Lokmanya Tilak Terminus Mumbai, Delhi, Chennai, Secunderabad, Pune, Tatanagar, Ahmedabad,
+ Okha, Kolhapur, Amravati, Wardha, Nagpur, Gondia, Bilaspur, Howrah-Kolkata, Shalimar-Kolkata, Chandrapur, and Chennai Central. 
+Several Mumbai trains stop at Shegaon, including the Gitanjali Express, Vidarbha Express, Amravati Superfast Express, Mumbai�Howrah Mail and Express, 
+Sewagram Express, Nagpur�Pune Express, Navjivan Express, Gondwana Express, Maharashtra Express, Okha�Puri Express and Ltt�Shalimar Express.
+
+Landmarks
+
+Gajanan maharaj
+
+Shri Sant Gajanan Maharaj Temple
+Shri Sant Gajanan Maharaj Temple is named for Gajanan Maharaj who once lived there. 
+Hindus consider Gajanan Maharaj a saint with miraculous powers, and the temple is built at his place of samadhi (meditation). 
+It is the largest temple trust in the Vidarbha region and is known as the "Pandharpur of Vidarbha".
+It attracts pilgrims from across Maharashtra.[5]
+
+A trust coordinates the day-to-day affairs of the temple. 
+It is headed by the managing trustees, who traditionally come from the Patil family. 
+The trust coordinates services in the spiritual, religious, medical and educational fields.
+
+
+
+Anand Sagar
+
+Shegaon has a tourist attraction called "Anand Sagar". 
+The project's budget is ?300 crore (3 billion rupees). Anand Sagar area is developed by Shri Gajanan Maharaj Mandir Trust on about 140 hectares (350 acres) of land. 
+it is a spiritual and entertainment centre for pilgrims, build around a Dhyan Mandir.
+There is a 9�11-metre-high (30�35 ft) statue of Swami Vivekananda above a meditation cell at the centre of the water reservoir. 
+It is a replica of Vivekananda Kendra at Kanyakumari. There is an Amphitheatre which seats 3,500 people, used to organize cultural activities,functions and exhibitions.
+ The water reservoir being developed is anticipated to meet existing and proposed needs of the Sansthan.
+                                    </p>
+                                </div>
+                                <div class="block" id="shegoan">
+                                </div>
+                                <div class="block map" id="shegoan_map">
+                    
+                                </div>
+                            </div>
+                            <div style="clear:both"></div>
+
+                            
+
+
+    </section>
+
+    <div style="clear:both"></div>
+
+
+
+
+
+
+    <footer>
+        <div class="foot1">
+            <h5>***** join us! follow us! contact us! *****</h5>
+        </div>
+        <div class="foot2">
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Google +</a></li>
+                <li><a href="#">Linkedin</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+
+        <h6>THANK YOU</h6>
+    </footer>
+</body>
+
+</html>
